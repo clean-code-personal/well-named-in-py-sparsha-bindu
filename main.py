@@ -9,7 +9,8 @@ if __name__ == '__main__':
   test_pair_to_number('Red', 'Orange', 7)
   print('Done :)')
 
-def format_color_coding_manual():
+  
+def format_color_coding_manual():  #Additional features added that is creating a reference manual 
     manual = []
     for pair_number in range(1, 26):
         major_color, minor_color = get_color_from_pair_number(pair_number)
