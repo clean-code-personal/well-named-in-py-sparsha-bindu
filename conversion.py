@@ -1,9 +1,9 @@
 from colors import MAJOR_COLORS, MINOR_COLORS
 
-def color_pair_to_string(major_color, minor_color):
+def color_pair_to_string(major_color, minor_color):  #returning a string representation of color combination 
   return f'{major_color} {minor_color}'
 
-def get_color_from_pair_number(pair_number):
+def get_color_from_pair_number(pair_number):  #returns the corresponding major and minor color
   zero_based_pair_number = pair_number - 1
   major_index = zero_based_pair_number // len(MINOR_COLORS)
   if major_index >= len(MAJOR_COLORS):
@@ -13,7 +13,7 @@ def get_color_from_pair_number(pair_number):
     raise Exception(' Minor index out of range')
   return MAJOR_COLORS[major_index], MINOR_COLORS[minor_index]
 
-def get_pair_number_from_color(major_color, minor_color):
+def get_pair_number_from_color(major_color, minor_color): #returns the corresponding pair number
   try:
     major_index = MAJOR_COLORS.index(major_color)
   except ValueError:
